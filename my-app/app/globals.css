@@ -1,0 +1,144 @@
+* {
+  border: none;
+  margin: none;
+  box-sizing: border-box;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes rotateAngle {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.glow {
+
+    position: relative;
+    display: block;
+    flex-direction: column;
+    background: #1b1b1b;
+
+}
+
+.glow::before,
+.glow::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  padding: 1px;
+  border-radius: .3rem;
+  background-image: conic-gradient(
+    from var(--angle),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(131, 131, 131),
+    rgb(255, 255, 255)
+  );
+  animation: rotateAngle 1s linear infinite;
+  z-index: -1;
+}
+
+.glow::before 
+{
+  filter: blur(20px);
+}
+
+body {
+  background: gray;
+}
+
+
+.memviox-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.hero, .about, .founded, .socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 75%; */
+
+  background: #000;
+  z-index: 1;
+  padding: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: .8rem;
+  box-shadow: .1rem .1rem .15rem white;
+  color: rgb(214, 214, 214);
+  text-shadow: .03rem .03rem .02rem white;
+}
+
+.hero p, .about p, .founded p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.about p, .founded p {
+  font-size: 1.2rem;
+}
+
+.hero h1, .about h1, .founded h1, .socials h1, .title {
+  position: none;
+  text-align: center;
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 550;
+  padding: 10px;
+  margin-top: 1.75rem;
+  border-radius: .3rem;
+}
+
+.about h1, .founded h1{
+  font-size: 1.55rem;
+}
+
+.socials-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+.glow::before,
+.glow::after {
+  pointer-events: none;
+}
+
+.socials-tag a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+
+}
+
+.title {
+  font-size: 2.2rem;
+  width: 85vw;
+  background: black;
+}
+
+
+
+
+
+
+
+
