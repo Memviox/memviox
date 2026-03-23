@@ -2,10 +2,10 @@ import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+// const supabase = createClient(
+//   process.env.NEXT_PUBLIC_SUPABASE_URL!,
+//   process.env.SUPABASE_SERVICE_ROLE_KEY!
+// );
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
@@ -17,12 +17,115 @@ interface WaitlistPayload {
   submitted_at: string;
 }
 
+// export async function POST(req: NextRequest) {
+//   try {
+//     const body = await req.json();
+//     const { email, first_name, last_name, date_of_birth, submitted_at } = body as WaitlistPayload;
+
+//     if (!email || !first_name || !last_name || !date_of_birth || !submitted_at) {     
+//       return NextResponse.json(
+//         { error: "All fields are required." },
+//         { status: 400 }
+//       );
+//     }
+
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     if (!emailRegex.test(email)) {
+//       return NextResponse.json(
+//         { error: "Please enter a valid email address." },
+//         { status: 400 }
+//       );
+//     }
+
+//     const { data: existing, error: lookupError } = await supabase
+//       .from("waitlist")
+//       .select("id")
+//       .eq("email", email.toLowerCase().trim())
+//       .maybeSingle();
+
+//     if (lookupError) {
+//       return NextResponse.json(
+//         { error: "Something went wrong. Please try again." },
+//         { status: 500 }
+//       );
+//     }
+
+//     if (existing) {
+//       return NextResponse.json(
+//         {
+//           error: "already_exists",
+//           message: "You're already on the Memviox waitlist! 🎉 We'll reach out when it's time.",
+//         },
+//         { status: 409 }
+//       );
+//     }
+
+//     const { error: insertError } = await supabase.from("waitlist").insert({
+//       email: email.toLowerCase().trim(),
+//       first_name: first_name.trim(),
+//       last_name: last_name.trim(),
+//       date_of_birth,
+//       submitted_at,
+//     });
+
+//     if (insertError) {
+//       if (insertError.code === "23505") {
+//         return NextResponse.json(
+//           {
+//             error: "already_exists",
+//             message: "You're already on the Memviox waitlist! 🎉",
+//           },
+//           { status: 409 }
+//         );
+//       }
+//       return NextResponse.json(
+//         { error: "Failed to save your info. Please try again." },
+//         { status: 500 }
+//       );
+//     }
+
+//     await resend.emails.send({
+//       from: "Memviox <hello@memviox.com>",
+//       to: email.toLowerCase().trim(),
+//       subject: "You're on the Memviox waitlist 🧠",
+//       html: buildEmail(first_name.trim()),
+//     });
+
+//     return NextResponse.json(
+//       { success: true, message: "You're on the list! Check your inbox." },
+//       { status: 201 }
+//     );
+//   } catch (err) {
+//     console.error("[Waitlist] Unexpected error:", err);
+//     return NextResponse.json(
+//       { error: "Internal server error." },
+//       { status: 500 }
+//     );
+//   }
+
+  
+// }
+
 export async function POST(req: NextRequest) {
   try {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const resendApiKey = process.env.RESEND_API_KEY;
+
+    if (!supabaseUrl || !supabaseServiceRoleKey || !resendApiKey) {
+      return NextResponse.json(
+        { error: "Missing required environment variables." },
+        { status: 500 }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceRoleKey);
+    const resend = new Resend(resendApiKey);
+
     const body = await req.json();
     const { email, first_name, last_name, date_of_birth, submitted_at } = body as WaitlistPayload;
 
-    if (!email || !first_name || !last_name || !date_of_birth || !submitted_at) {     
+    if (!email || !first_name || !last_name || !date_of_birth || !submitted_at) {
       return NextResponse.json(
         { error: "All fields are required." },
         { status: 400 }
