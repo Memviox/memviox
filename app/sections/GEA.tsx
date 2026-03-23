@@ -31,7 +31,8 @@ const GEA = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const { firstName, lastName, email, dateOfBirth } = form;
 
