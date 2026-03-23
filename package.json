@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@lobehub/icons": "^5.0.1",
+    "@supabase/supabase-js": "^2.99.3",
     "next": "16.1.6",
     "postcss": "^8.5.8",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "resend": "^6.9.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
