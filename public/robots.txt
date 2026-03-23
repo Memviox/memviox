@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Important files for crawlers
+Allow: /ai.txt
+Allow: /memviox.json
+
+# Future sitemap
+Sitemap: https://memviox.com/sitemap.xml

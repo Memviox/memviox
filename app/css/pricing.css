@@ -1,0 +1,134 @@
+.pricing {
+  padding-top: 68px;
+}
+
+.pricing-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* product sheared classnames */
+.pricing-d1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.pricing-dn-tag {
+  font-size: var(--tag-fz);
+  font-weight: 650;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.pricing-dn-title {
+  font-size: var(--title-fz);
+  font-weight: 550;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.pricing-dn-subtitle {
+  font-size: var(--subtitle-fz);
+  font-weight: 450;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--sec-text);
+}
+
+.pricing-d2 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 2.5rem;
+}
+
+.pricing-d2-n {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 20px;
+
+  background-color: var(--sec-bg);
+  box-shadow: 0.04rem 0.04rem 0.4rem rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 1.15rem;
+
+  min-width: 350px;
+  max-width: 350px;
+}
+
+.pricing-card-tag {
+  font-size: 1.5rem;
+  font-weight: 650;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.pricing-card-title {
+  font-size: 1.25rem;
+  font-weight: 550;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.pricing-card-subtitle {
+  font-size: 1.05rem;
+  font-weight: 450;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--sec-text);
+}
+
+.pricing-card-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.pricing-card-ul-li {
+  display: flex;
+  gap: 0.5rem;
+  text-align: center;
+  align-items: center;
+}
+
+.pricing-button-a {
+  margin-top: auto;
+  color: white;
+  cursor: pointer;
+  background: var(--sec-bg);
+  box-shadow: 0.02rem 0.02rem 0.08rem white;
+  font-size: 1.05rem;
+  padding: 8px;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.pricing-button-a:hover,
+.pricing-button-a:hover {
+  background: rgb(46, 38, 41);
+  box-shadow: 1px 1px 4px rgb(114, 114, 114);
+}
+
+.pricing-button-a:active,
+.pricing-button-a:active {
+  background: rgb(138, 138, 138);
+  scale: 0.95;
+}
+
+@media (max-width: 1024px) {
+  .pricing-d2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+}

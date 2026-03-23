@@ -1,0 +1,181 @@
+.gea-alert {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.gea-alert--success {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #86efac;
+}
+
+.gea-alert--duplicate {
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  color: #fde68a;
+}
+
+.gea-alert--error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+
+.gea {
+  padding-top: 68px;
+}
+
+.gea-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* product sheared classnames */
+.gea-d1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.gea-dn-tag {
+  font-size: var(--tag-fz);
+  font-weight: 650;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.gea-dn-title {
+  font-size: var(--title-fz);
+  font-weight: 550;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.gea-dn-subtitle {
+  font-size: var(--subtitle-fz);
+  font-weight: 450;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--sec-text);
+}
+
+
+
+.gea-form{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 20px;
+  gap: 1rem;
+
+  background-color: var(--sec-bg);
+  box-shadow: 0.04rem 0.04rem 0.4rem rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+
+} 
+
+.gea-form-dn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+
+}
+
+.gea-form-label, .gea-form-input {
+  display: flex;
+
+  font-size: 1.25rem;
+  font-weight: 550;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+
+
+}
+
+.gea-form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.15rem;
+  border: 1px solid white;
+  box-shadow: .03rem .03rem .04rem white;
+  border-radius: .7rem;
+
+}
+
+.gea-card-tag {
+  font-size: 1.5rem;
+  font-weight: 650;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.gea-card-title {
+  font-size: 1.25rem;
+  font-weight: 550;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--main-text);
+}
+
+.gea-card-subtitle {
+  font-size: 1.05rem;
+  font-weight: 450;
+  text-shadow: 0.02rem 0.02rem 0.08rem white;
+  color: var(--sec-text);
+}
+
+.gea-form-button {
+  color: white;
+  cursor: pointer;
+  background: var(--sec-bg);
+  box-shadow: 0.02rem 0.02rem 0.08rem white;
+  font-size: 1.05rem;
+  padding: 8px;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.gea-form-button:hover,
+.gea-form-button:hover,
+.hero-d1-n-a:hover {
+  background: rgb(46, 38, 41);
+  box-shadow: 1px 1px 4px rgb(114, 114, 114);
+}
+
+.gea-form-button:active,
+.gea-form-button:active,
+.hero-d1-n-a:active {
+  background: rgb(138, 138, 138);
+  scale: 0.95;
+}
+
+
+@media (max-width: 1024px) {
+  .gea-d2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .gea-dn-subtitle {
+    padding: 3px;
+  }
+
+}

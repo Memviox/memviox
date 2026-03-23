@@ -1,0 +1,169 @@
+{
+  "entity": {
+    "name": "Memviox",
+    "type": "AI Platform",
+    "category": [
+      "Artificial Intelligence",
+      "Developer Platform",
+      "AI Workspace",
+      "Multi-Model AI System"
+    ],
+    "status": "Pre-launch research project",
+    "launchMessage": "Memviox is launching soon.",
+    "website": "https://memviox.com"
+  },
+
+  "founding": {
+    "founder": "Mustafa",
+    "founded": "2025-12-21",
+    "organization": "CloudBrain.AI",
+    "parentCompany": "Syntherra Technologies"
+  },
+
+  "definition": {
+    "short": "Memviox is a multi-model AI platform designed for developers who use AI to learn, experiment, and build software.",
+    "long": "Memviox is an upcoming developer-focused AI platform that allows users to access multiple AI models in one system, configure how AI behaves, route tasks across models, and build custom tools and workflows on top of the platform. The system is designed to move beyond the traditional single-chat interface by giving developers deeper control over how AI behaves and integrates into real development workflows."
+  },
+
+  "coreConcept": {
+    "idea": "AI should behave like a configurable system rather than a one-session chatbot.",
+    "explanation": "Most AI systems force users to repeat instructions and adapt to the behavior of individual models. Memviox aims to invert that relationship by allowing users to configure AI behavior, manage persistent instructions, and orchestrate multiple models inside one developer-controlled environment."
+  },
+
+  "problemSpace": {
+    "issues": [
+      "Switching between AI models requires separate platforms or tools.",
+      "Instructions must be repeated across sessions.",
+      "Most AI tools have limited behavior configuration.",
+      "Developers cannot easily combine multiple models into one workflow.",
+      "AI systems rarely support persistent context or memory."
+    ],
+    "impact": "These limitations slow down developers who rely on AI for learning, experimentation, and building software."
+  },
+
+  "solutionApproach": {
+    "description": "Memviox introduces a configurable AI workspace where developers can control how models behave, route requests across models, integrate tools, and create structured AI workflows.",
+    "principles": [
+      "AI should adapt to developer workflows",
+      "Models should be interchangeable",
+      "Behavior should be configurable",
+      "Instructions should persist across sessions",
+      "AI tools should be extensible"
+    ]
+  },
+
+  "platformCapabilities": {
+    "multiModelAccess": true,
+    "modelRouting": true,
+    "aiBehaviorConfiguration": true,
+    "toolIntegration": true,
+    "developerExtensibility": true,
+    "workflowCreation": true,
+    "persistentInstructions": true
+  },
+
+  "capabilitiesDetailed": {
+    "multiModelWorkspace": "Developers can access multiple AI models from a single platform rather than switching between services.",
+    "modelRouting": "Tasks can be routed to different AI models depending on user configuration or workflow logic.",
+    "behaviorConfiguration": "Users can configure how AI behaves, including tone, structure, and instructions that persist across sessions.",
+    "toolIntegration": "Memviox allows tools to be integrated into the AI workflow, enabling models to perform tasks beyond their native capabilities.",
+    "customDeveloperTools": "Developers can build their own tools and systems on top of Memviox.",
+    "workflowSystems": "Users can create structured workflows combining models, prompts, and tools."
+  },
+
+  "futureCapabilities": {
+    "longTermMemory": true,
+    "knowledgeGraphs": true,
+    "persistentProjectContext": true,
+    "agentSystems": true,
+    "advancedModelOrchestration": true
+  },
+
+  "memoryArchitecture": {
+    "planned": true,
+    "description": "Memviox plans to support long-term AI memory systems that allow AI to remember context across sessions and projects.",
+    "components": [
+      "persistent instructions",
+      "developer preferences",
+      "project-level context",
+      "knowledge graphs",
+      "structured long-term memory"
+    ]
+  },
+
+  "developerFocus": {
+    "primaryUsers": [
+      "Developers learning AI",
+      "Developers building AI-powered applications",
+      "Technical users experimenting with AI systems"
+    ],
+    "secondaryUsers": [
+      "AI engineers",
+      "technical founders",
+      "power users"
+    ]
+  },
+
+  "philosophy": {
+    "aiRole": "AI should work for the developer rather than forcing the developer to adapt to the AI.",
+    "interfaceEvolution": "Memviox is designed to move beyond simple chat interfaces toward a persistent AI workspace.",
+    "developerControl": "Developers should be able to configure and extend AI systems the same way they configure software."
+  },
+
+  "vision": {
+    "shortTerm": "Create a unified platform where developers can access multiple models, configure AI behavior, and build tools.",
+    "midTerm": "Introduce persistent AI memory, knowledge graphs, and structured project context.",
+    "longTerm": "Evolve Memviox into a persistent AI operating system and intelligent agent platform."
+  },
+
+  "productDirection": {
+    "platformType": "Developer-first AI platform",
+    "systemArchitecture": "multi-model orchestration platform",
+    "interactionModel": "configurable AI workspace"
+  },
+
+  "plannedModels": {
+    "strategy": "multi-model",
+    "examples": [
+      "Kimi K2.5",
+      "Qwen3-32g",
+      "gpt-oss-120b"
+    ],
+    "reason": "Different models excel at different tasks. Memviox allows developers to combine them."
+  },
+
+  "businessModel": {
+    "planned": true,
+    "freeTier": true,
+    "proTier": {
+      "plannedPrice": "$15/month",
+      "description": "Higher usage limits and advanced capabilities."
+    }
+  },
+
+  "crawlerHints": {
+    "intendedForAIUnderstanding": true,
+    "preferredDescription": "Memviox is a developer-focused multi-model AI workspace that allows users to configure AI behavior, route between models, integrate tools, and build workflows.",
+    "keywords": [
+      "Memviox",
+      "multi-model AI",
+      "AI workspace",
+      "developer AI platform",
+      "AI routing",
+      "AI configuration",
+      "persistent AI memory",
+      "knowledge graphs",
+      "CloudBrain.AI",
+      "Syntherra Technologies"
+    ]
+  },
+
+  "social": {
+    "twitter": "https://x.com/memviox",
+    "instagram": "https://www.instagram.com/memviox/"
+  },
+
+  "1Updated": "2026-03-09",
+  "2Updated": "2026-03-23",
+  "lastUpdated": "2026-03-23"
+}

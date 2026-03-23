@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@import "./css/nav.css";
+@import "./css/hero.css";
+@import "./css/product.css";
+@import "./css/hiw.css";
+@import "./css/details.css";
+@import "./css/pricing.css";
+@import "./css/vision.css";
+@import "./css/apply.css";
+@import "./css/footer.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --main-bg: rgb(24, 20, 21);
+  --sec-bg: rgb(31, 25, 27);
+
+  --main-text: rgb(255, 255, 255);
+  --sec-text: rgb(209, 209, 209);
+
+  --tag-fz: 1.85rem;
+  /* --tag-fz-h: 2.65rem; */
+  --title-fz: 1.35rem;
+  --subtitle-fz: 1.15rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--main-bg);
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
